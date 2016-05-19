@@ -2,7 +2,7 @@
   "name": "chitu",
   "amdName": "chitu",
   "globalName": "chitu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chuck Her In The Ute",
   "main": "dist/chitu.js",
   "jsnext:main": "src/index.js",

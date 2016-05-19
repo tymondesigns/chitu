@@ -19,7 +19,7 @@ const check = {},
 check.is = (type, val) => getType(val) === type;
 
 // Populate helper methods.
-for (let i = 0; i < types.length; i++) {
+for (let i = types.length; i--;) {
     check[`is${types[i]}`] = (val) => check.is(types[i], val);
 }
 
