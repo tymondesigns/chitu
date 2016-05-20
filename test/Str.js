@@ -1,8 +1,12 @@
 import test from 'ava';
 import Str from '../src/Str';
 
-test('it should capitalize a string', t => {
-    t.is(Str.capitalize('foo'), 'Foo');
+test('it should capitalize all words in a string', t => {
+    t.is(Str.capitalize('Lorem ipsum dolor sit amet'), 'Lorem Ipsum Dolor Sit Amet');
+});
+
+test('it should capitalize the first word in a string', t => {
+    t.is(Str.ucfirst('foo'), 'Foo');
 });
 
 test('it should determine whether a string conatins another string', t => {

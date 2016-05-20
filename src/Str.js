@@ -2,6 +2,10 @@
 class Str {
 
     static capitalize (str) {
+        return str.replace(/(?:^|\s)\S/g, s => s.toUpperCase());
+    }
+
+    static ucfirst (str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
