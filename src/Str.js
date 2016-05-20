@@ -14,7 +14,6 @@ class Str {
     }
 
     static random (length = 32) {
-        // return (Math.random() + 1).toString(36).substring(length);
         let s = '';
         while (s.length < length && length > 0) {
             let r = Math.random();
@@ -22,6 +21,19 @@ class Str {
         }
 
         return s;
+    }
+
+    /**
+     * Determine if a given string starts with a given substring.
+     *
+     * @param   {String}   str       The string to check against
+     * @param   {String}   val       The string to check start
+     * @param   {Integer}  position  The position to start in the string
+     *
+     * @return  {Boolean}
+     */
+    static startsWith (str, val, position = 0) {
+        return String.prototype.startsWith.call(str, val, position) || str.substr(position, val.length) === val;
     }
 }
 

@@ -25,3 +25,10 @@ test('it should generate a random string', t => {
         t.false(strs.indexOf(val) === -1);
     }
 });
+
+test('it should check if a string starts with a string', t => {
+    t.true(Str.startsWith('Lorem ipsum dolor sit amet', 'Lorem'));
+    t.false(Str.startsWith('Lorem ipsum dolor sit amet', 'ipsum'));
+
+    t.true(Str.startsWith('Lorem ipsum dolor sit amet', 'ipsum', 6));
+});
