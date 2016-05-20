@@ -4,13 +4,20 @@
 
 [youtube.com/watch?v=9i2eZaJsC7g](https://www.youtube.com/watch?v=9i2eZaJsC7g)
 
-Utilities
+JavaScript Utilities
 
 [![Travis](https://img.shields.io/travis/tymondesigns/chitu.svg?style=flat-square)](https://travis-ci.org/tymondesigns/chitu)
 
+## Installation
+
+#### via npm
+```js
+> npm install chitu --save
+```
+
 ## Modules available
 
-### Check
+### check
 A module to check the type of a given value.
 
 ```js
@@ -28,7 +35,23 @@ check.isError(new Error()); // = true
 check.isNull(null); // = true
 check.isUndefined(void 0); // = true
 check.isSymbol(Symbol('foo')); // = true
+
+// or for anything else
+check.is('Array', ['foo']);
+check.is('Object', { baz: 'bob' });
+// etc
 ```
 
-### Value
+### value
 
+Check if the value is a function and execute it (with provided parameters) or simply return the value.
+
+```js
+import { value } from 'chitu';
+
+const foo = (a, b, c) => a * b * c;
+const bar = ['baz'];
+
+const fooVal = value(foo, 2, 2, 2); // = 8
+const barVal = value(bar); // = ['baz']
+```
