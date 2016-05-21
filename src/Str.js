@@ -98,6 +98,10 @@ class Str {
 
     // }
 
+    static trim (str) {
+        return str.replace(/\s+/g, '');
+    }
+
     /**
      * Convert the string to Studly case
      *
@@ -106,7 +110,7 @@ class Str {
      * @return  {String}
      */
     static studly (str) {
-        return Str.capitalize(str.replace(/[_-]+/g, ' ')).replace(/\s+/g, '');
+        return this.trim(this.capitalize(str.replace(/[_-]+/g, ' ')));
     }
 
     /**
@@ -117,7 +121,7 @@ class Str {
      * @return  {String}
      */
     static camel (str) {
-        return Str.lcfirst(Str.studly(str));
+        return this.lcfirst(this.studly(str));
     }
 }
 
