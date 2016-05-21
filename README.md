@@ -7,6 +7,8 @@
 JavaScript Utilities
 
 [![Travis](https://img.shields.io/travis/tymondesigns/chitu.svg?style=flat-square)](https://travis-ci.org/tymondesigns/chitu)
+[![Codecov](https://img.shields.io/codecov/c/github/tymondesigns/chitu.svg?maxAge=2592000&style=flat-square)](https://codecov.io/gh/tymondesigns/chitu)
+[![npm](https://img.shields.io/npm/v/chitu.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.com/package/chitu)
 
 ## Installation
 
