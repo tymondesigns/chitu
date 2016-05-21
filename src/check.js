@@ -4,7 +4,8 @@
  *
  * @module check
  */
-const check = {}, types = 'Array Object String Date RegExp Function Boolean Number Error Null Undefined Symbol'.split(' ');
+const check = {},
+    types = 'Array Object String Date RegExp Function Boolean Number Error Null Undefined Symbol'.split(' ');
 
 /**
  * Check the type of a value.
@@ -17,8 +18,6 @@ const check = {}, types = 'Array Object String Date RegExp Function Boolean Numb
 check.is = (type, val) => Object.prototype.toString.call(val).slice(8, -1) === type;
 
 // Populate helper methods.
-for (let i = types.length; i--;) {
-    check[`is${types[i]}`] = (val) => check.is(types[i], val);
-}
+types.forEach(type => check[`is${type}`] = (val) => check.is(type, val));
 
 export default check;
