@@ -98,6 +98,13 @@ class Str {
 
     // }
 
+    /**
+     * Strip all whitespace from a string.
+     *
+     * @param   {String}  str  The string to strip
+     *
+     * @return  {String}
+     */
     static strip (str) {
         return str.replace(/\s+/g, '');
     }
