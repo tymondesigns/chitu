@@ -17,6 +17,7 @@ test('it should determine whether a string conatins another string', t => {
 test('it should limit a string', t => {
     t.is(Str.limit('Lorem ipsum dolor sit amet', 20), 'Lorem ipsum dolor si...');
     t.is(Str.limit('Lorem ipsum dolor sit amet', 10, '***'), 'Lorem ipsu***');
+    t.is(Str.limit('Lorem ipsum dolor sit amet', 100), 'Lorem ipsum dolor sit amet');
 });
 
 test('it should generate a random string', t => {

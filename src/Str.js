@@ -59,7 +59,7 @@ class Str {
      * @return  {String}
      */
     static limit (str, limit = 100, end = '...') {
-        return str.substring(0, limit) + (str.length < limit ? end : '');
+        return str.substring(0, limit) + (str.length > limit ? end : '');
     }
 
     /**
