@@ -1,3 +1,9 @@
-export { default as check } from './check';
-export { default as value } from './value';
-export { default as Str } from './Str';
+import check from './check';
+import value from './value';
+import Str from './Str';
+
+export default {
+    check,
+    value,
+    Str
+};
