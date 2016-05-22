@@ -45,8 +45,8 @@ class Str {
      *
      * @return  {Boolean}
      */
-    static contains (str, val) {
-        return str.indexOf(val) !== -1;
+    static contains (str, val, position = 0) {
+        return str.indexOf(val, position) !== -1;
     }
 
     /**
@@ -104,7 +104,14 @@ class Str {
      * @return  {Boolean}
      */
     static endsWith (str, val, position = str.length) {
-        return str.endsWith(val, position);
+        const endsWith = (s, v, p) => {
+            p -= v.length;
+            let lastIndex = s.indexOf(v, p);
+
+            return lastIndex !== -1 && lastIndex === p;
+        };
+
+        return String.prototype.endsWith ? str.endsWith(val, position) : endsWith(str, val, position);
     }
 
     /**

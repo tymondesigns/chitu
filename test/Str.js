@@ -37,6 +37,11 @@ test('it should check if a string starts with a string', t => {
     t.true(Str.startsWith('Lorem ipsum dolor sit amet', 'ipsum', 6));
 });
 
+test('it should check if a string ends with a string', t => {
+    t.true(Str.endsWith('Lorem ipsum dolor sit amet', 'amet'));
+    t.false(Str.endsWith('Lorem ipsum dolor sit amet', 'ipsum'));
+});
+
 test('it should convert a string into studly case', t => {
     t.is(Str.studly('chuck_her_in_the_ute'), 'ChuckHerInTheUte');
     t.is(Str.studly('chuck_her_in_the_u_t_e'), 'ChuckHerInTheUTE');
