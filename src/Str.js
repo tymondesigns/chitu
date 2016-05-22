@@ -98,7 +98,7 @@ class Str {
 
     // }
 
-    static trim (str) {
+    static strip (str) {
         return str.replace(/\s+/g, '');
     }
 
@@ -110,7 +110,7 @@ class Str {
      * @return  {String}
      */
     static studly (str) {
-        return this.trim(this.capitalize(str.replace(/[_-]+/g, ' ')));
+        return this.strip(this.capitalize(str.replace(/[_-]+/g, ' ')));
     }
 
     /**
