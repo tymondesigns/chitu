@@ -58,6 +58,12 @@ test('it should check if a string is lowercase', t => {
     t.false(Str.isLowerCase('Foo Bar'));
 });
 
+test('it should check if a string is uppercase', t => {
+    t.true(Str.isUpperCase('FOO'));
+    t.false(Str.isUpperCase('FOO bar'));
+});
+
 test('it should convert a string into snake case', t => {
     t.is(Str.snake('chuckHerInTheUte'), 'chuck_her_in_the_ute');
+    t.is(Str.snake('chuckHerInTheUTE'), 'chuck_her_in_the_u_t_e');
 });

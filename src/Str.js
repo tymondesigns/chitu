@@ -90,16 +90,43 @@ class Str {
      */
     static startsWith (str, val, position = 0) {
         return String.prototype.startsWith ?
-            String.prototype.startsWith.call(str, val, position) :
+            str.startsWith(val, position) :
             str.substr(position, val.length) === val;
     }
 
-    // static endsWith () {
+    /**
+     * Determine if a given string ends with a given substring.
+     *
+     * @param   {String}   str       The string to check against
+     * @param   {String}   val       The string to check ending
+     * @param   {Integer}  position  The position to end in the string
+     *
+     * @return  {Boolean}
+     */
+    static endsWith (str, val, position = str.length) {
+        return str.endsWith(val, position);
+    }
 
-    // }
-
+    /**
+     * Determine if a given string is lowercase
+     *
+     * @param   {String}  str  The string to check
+     *
+     * @return  {Boolean}
+     */
     static isLowerCase (str) {
         return str === str.toLowerCase() && str !== str.toUpperCase();
+    }
+
+    /**
+     * Determine if a given string is uppercase
+     *
+     * @param   {String}  str  The string to check
+     *
+     * @return  {Boolean}
+     */
+    static isUpperCase (str) {
+        return str === str.toUpperCase() && str !== str.toLowerCase();
     }
 
     /**
