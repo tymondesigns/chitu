@@ -82,7 +82,7 @@ Str.contains('foobarbaz', 'bob'); // = false
 Str.limit('Lorem ipsum dolor sit amet', 10); // = 'Lorem ipsu...'
 Str.limit('Lorem ipsum dolor sit amet', 20); // = 'Lorem ipsum dolor si...'
 
-// Generate a random string of a given length
+// Generate a random string of a given length (defaults to 32)
 Str.random(); // e.g. = 'LDGMzIEHKrnoDFqHIzFwyHwwIGEHK0xM'
 Str.random(16); // e.g. = 'yHuG1F2wrEvKJGME'
 ```
