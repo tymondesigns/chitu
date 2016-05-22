@@ -98,6 +98,10 @@ class Str {
 
     // }
 
+    static isLowerCase (str) {
+        return str === str.toLowerCase() && str !== str.toUpperCase();
+    }
+
     /**
      * Strip all whitespace from a string.
      *
@@ -129,6 +133,22 @@ class Str {
      */
     static camel (str) {
         return this.lcfirst(this.studly(str));
+    }
+
+    /**
+     * Convert the string to Snake case
+     *
+     * @param   {String}  str        The string to convert
+     * @param   {String}  delimeter  The delimeter to insert
+     *
+     * @return  {String}
+     */
+    static snake (str, delimeter = '_') {
+        if (! this.isLowerCase(str)) {
+            return this.strip(str).replace(/([A-Z])/g, `${delimeter}$1`).toLowerCase();
+        }
+
+        return str;
     }
 }
 

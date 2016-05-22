@@ -52,3 +52,12 @@ test('it should convert a string into camel case', t => {
     t.is(Str.camel('tymon_designs'), 'tymonDesigns');
     t.is(Str.camel('tymonDesigns'), 'tymonDesigns');
 });
+
+test('it should check if a string is lowercase', t => {
+    t.true(Str.isLowerCase('foo bar'));
+    t.false(Str.isLowerCase('Foo Bar'));
+});
+
+test('it should convert a string into snake case', t => {
+    t.is(Str.snake('chuckHerInTheUte'), 'chuck_her_in_the_ute');
+});
