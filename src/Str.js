@@ -59,7 +59,7 @@ class Str {
      * @return  {String}
      */
     static limit (str, limit = 100, end = '...') {
-        return str.substring(0, limit) + end;
+        return str.substring(0, limit) + (str.length < limit ? end : '');
     }
 
     /**
@@ -106,9 +106,9 @@ class Str {
     static endsWith (str, val, position = str.length) {
         const endsWith = (s, v, p) => {
             p -= v.length;
-            let lastIndex = s.indexOf(v, p);
+            let li = s.indexOf(v, p);
 
-            return lastIndex !== -1 && lastIndex === p;
+            return li !== -1 && li === p;
         };
 
         return String.prototype.endsWith ? str.endsWith(val, position) : endsWith(str, val, position);
