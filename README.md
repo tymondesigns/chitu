@@ -57,3 +57,32 @@ const bar = ['baz'];
 const fooVal = value(foo, 2, 2, 2); // = 8
 const barVal = value(bar); // = ['baz']
 ```
+
+### Str
+
+String manipulation utilities. Inspired by Laravel's `Illuminate\Support\Str`
+
+```js
+import { Str } from 'chitu';
+
+// Capitalize all words in a string
+Str.capitalize('lorem ipsum dolor'); // = 'Lorem Ipsum Dolor'
+
+// Convert the first letter to uppercase
+Str.ucfirst('foo bar baz'); // = 'Foo bar baz'
+
+// Convert the first letter to lowercase
+Str.lcfirst('Foo bar baz'); // = 'foo bar baz'
+
+// Determine if a given string contains a given string
+Str.contains('foobarbaz', 'bar'); // = true
+Str.contains('foobarbaz', 'bob'); // = false
+
+// Limit a string to a given length appended with a given suffix.
+Str.limit('Lorem ipsum dolor sit amet', 10); // = 'Lorem ipsu...'
+Str.limit('Lorem ipsum dolor sit amet', 20); // = 'Lorem ipsum dolor si...'
+
+// Generate a random string of a given length
+Str.random(); // e.g. = 'LDGMzIEHKrnoDFqHIzFwyHwwIGEHK0xM'
+Str.random(16); // e.g. = 'yHuG1F2wrEvKJGME'
+```

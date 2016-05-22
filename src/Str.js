@@ -40,8 +40,9 @@ class Str {
     /**
      * Determine if a given string contains a given string.
      *
-     * @param   {String}  str  The haystack
-     * @param   {String}  val  The needle
+     * @param   {String}   str           The haystack
+     * @param   {String}   val           The needle
+     * @param   {Integer}  [position=0]  The position to start
      *
      * @return  {Boolean}
      */
@@ -52,9 +53,9 @@ class Str {
     /**
      * Limit a string to a given length with a suffix.
      *
-     * @param   {String}  str    The string to limit
-     * @param   {Number}  limit  The limit
-     * @param   {String}  end    The suffix
+     * @param   {String}  str          The string to limit
+     * @param   {Number}  [limit=100]  The limit
+     * @param   {String}  [end=...]    The suffix
      *
      * @return  {String}
      */
@@ -65,7 +66,7 @@ class Str {
     /**
      * Generate a random string of a given length.
      *
-     * @param   {Number}  length  The length of the generated string
+     * @param   {Number}  [length=32]  The length of the generated string
      *
      * @return  {String}
      */
@@ -82,9 +83,9 @@ class Str {
     /**
      * Determine if a given string starts with a given substring.
      *
-     * @param   {String}   str       The string to check against
-     * @param   {String}   val       The string to check start
-     * @param   {Integer}  position  The position to start in the string
+     * @param   {String}   str           The string to check against
+     * @param   {String}   val           The string to check start
+     * @param   {Integer}  [position=0]  The position to start in the string
      *
      * @return  {Boolean}
      */
@@ -97,9 +98,9 @@ class Str {
     /**
      * Determine if a given string ends with a given substring.
      *
-     * @param   {String}   str       The string to check against
-     * @param   {String}   val       The string to check ending
-     * @param   {Integer}  position  The position to end in the string
+     * @param   {String}   str                    The string to check against
+     * @param   {String}   val                    The string to check ending
+     * @param   {Integer}  [position=str.length]  The position to end in the string
      *
      * @return  {Boolean}
      */
@@ -172,8 +173,8 @@ class Str {
     /**
      * Convert the string to Snake case
      *
-     * @param   {String}  str        The string to convert
-     * @param   {String}  delimeter  The delimeter to insert
+     * @param   {String}  str            The string to convert
+     * @param   {String}  [delimeter=_]  The delimeter to insert
      *
      * @return  {String}
      */
