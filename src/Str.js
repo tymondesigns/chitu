@@ -106,10 +106,9 @@ class Str {
      */
     static endsWith (str, val, position = str.length) {
         const endsWith = (s, v, p) => {
-            p -= v.length;
             let li = s.indexOf(v, p);
 
-            return li !== -1 && li === p;
+            return li !== -1 && li === (p -= v.length);
         };
 
         return String.prototype.endsWith ? str.endsWith(val, position) : endsWith(str, val, position);
@@ -123,7 +122,7 @@ class Str {
      * @return  {Boolean}
      */
     static isLowerCase (str) {
-        return str === str.toLowerCase() && str !== str.toUpperCase();
+        return str === str.toLowerCase();
     }
 
     /**
@@ -134,7 +133,7 @@ class Str {
      * @return  {Boolean}
      */
     static isUpperCase (str) {
-        return str === str.toUpperCase() && str !== str.toLowerCase();
+        return str === str.toUpperCase();
     }
 
     /**
