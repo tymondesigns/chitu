@@ -1,5 +1,6 @@
 import test from 'ava';
 import Str from '../src/Str';
+import check from '../src/check';
 
 test('it should capitalize all words in a string', t => {
     t.is(Str.capitalize('Lorem ipsum dolor sit amet'), 'Lorem Ipsum Dolor Sit Amet');
@@ -21,14 +22,8 @@ test('it should limit a string', t => {
 });
 
 test('it should generate a random string', t => {
-    const strs = [];
-    for (let i = 100 - 1; i >= 0; i--) {
-        let val = Str.random();
-        strs.push(val);
-
-        t.is(val.length, 32);
-        t.false(strs.indexOf(val) === -1);
-    }
+    t.true(check.isString(Str.random()));
+    t.is(Str.random(16).length, 16);
 });
 
 test('it should check if a string starts with a string', t => {

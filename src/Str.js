@@ -64,7 +64,7 @@ class Str {
     }
 
     /**
-     * Generate a random string of a given length.
+     * Generate a "random" alpha-numeric string.
      *
      * @param   {Number}  [length=32]  The length of the generated string
      *
