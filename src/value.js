@@ -1,4 +1,4 @@
-import check from './check';
+import type from './type';
 
 /**
  * Return the value or execute as a function
@@ -11,5 +11,5 @@ import check from './check';
  * @return  {Mixed}
  */
 export default function value (val, ...args) {
-    return check.isFunction(val) ? val.apply(this, args) : val;
+    return type.isFunction(val) ? val.apply(this, args) : val;
 }

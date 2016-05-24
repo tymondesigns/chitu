@@ -2,9 +2,9 @@
 /**
  * Module for checking variable types.
  *
- * @module check
+ * @module type
  */
-const check = {},
+const type = {},
     types = 'Array Object String Date RegExp Function Boolean Number Error Null Undefined Symbol'.split(' ');
 
 /**
@@ -15,9 +15,9 @@ const check = {},
  *
  * @return {Boolean}
  */
-check.is = (type, val) => Object.prototype.toString.call(val).slice(8, -1) === type;
+type.is = (type, val) => Object.prototype.toString.call(val).slice(8, -1) === type;
 
 // Populate helper methods.
-types.forEach(type => check[`is${type}`] = (val) => check.is(type, val));
+types.forEach(t => type[`is${t}`] = (v) => type.is(t, v));
 
-export default check;
+export default type;

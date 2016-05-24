@@ -19,28 +19,28 @@ JavaScript Utilities
 
 ## Modules available
 
-### check
+### type
 A module to check the type of a given value.
 
 ```js
-import { check } from 'chitu';
+import { type } from 'chitu';
 
-check.isArray(['foo', 'bar']); // = true
-check.isObject({ foo: 'bar' }); // = true
-check.isString('foo'); // = true
-check.isDate(new Date()); // = true
-check.isRegExp(/foo/g); // = true
-check.isFunction(function () {}); // = true
-check.isBoolean(false); // = true
-check.isNumber(123); // = true
-check.isError(new Error()); // = true
-check.isNull(null); // = true
-check.isUndefined(void 0); // = true
-check.isSymbol(Symbol('foo')); // = true
+type.isArray(['foo', 'bar']); // = true
+type.isObject({ foo: 'bar' }); // = true
+type.isString('foo'); // = true
+type.isDate(new Date()); // = true
+type.isRegExp(/foo/g); // = true
+type.isFunction(function () {}); // = true
+type.isBoolean(false); // = true
+type.isNumber(123); // = true
+type.isError(new Error()); // = true
+type.isNull(null); // = true
+type.isUndefined(void 0); // = true
+type.isSymbol(Symbol('foo')); // = true
 
 // or for anything else
-check.is('Array', ['foo']);
-check.is('Object', { baz: 'bob' });
+type.is('Array', ['foo']);
+type.is('Object', { baz: 'bob' });
 // etc
 ```
 

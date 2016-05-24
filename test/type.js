@@ -1,5 +1,5 @@
 import test from 'ava';
-import check from '../src/check';
+import type from '../src/type';
 
 const types = {
     'Array': {
@@ -127,12 +127,12 @@ const types = {
 };
 
 // Execute the tests
-for (let type in types) {
-    let assertions = types[type];
+for (let tp in types) {
+    let assertions = types[tp];
 
-    test(`it should check ${type} type`, t => {
+    test(`it should check ${tp} type`, t => {
         for (let assertion in assertions) {
-            for (let val of assertions[assertion]) t[assertion](check[`is${type}`](val));
+            for (let val of assertions[assertion]) t[assertion](type[`is${tp}`](val));
         }
     });
 }

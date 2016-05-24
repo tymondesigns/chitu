@@ -1,6 +1,6 @@
 import test from 'ava';
 import Str from '../src/Str';
-import check from '../src/check';
+import type from '../src/type';
 
 test('it should capitalize all words in a string', t => {
     t.is(Str.capitalize('Lorem ipsum dolor sit amet'), 'Lorem Ipsum Dolor Sit Amet');
@@ -22,7 +22,7 @@ test('it should limit a string', t => {
 });
 
 test('it should generate a random string', t => {
-    t.true(check.isString(Str.random()));
+    t.true(type.isString(Str.random()));
     t.is(Str.random(16).length, 16);
 });
 
