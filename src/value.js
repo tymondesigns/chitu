@@ -5,8 +5,8 @@ import type from './type';
  *
  * @module  value
  *
- * @param   {Mixed}  val   A value or a function that returns a value
- * @param   {Mixed}  args  One or more arguments
+ * @param   {Mixed}  val     A value or a function that returns a value
+ * @param   {Mixed}  [args]  One or more arguments
  *
  * @return  {Mixed}
  */
