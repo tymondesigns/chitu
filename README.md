@@ -80,7 +80,7 @@ Str.contains('foobarbaz', 'bob'); // = false
 
 // Limit a string to a given length appended with a given suffix.
 Str.limit('Lorem ipsum dolor sit amet', 10); // = 'Lorem ipsu...'
-Str.limit('Lorem ipsum dolor sit amet', 20); // = 'Lorem ipsum dolor si...'
+Str.limit('Lorem ipsum dolor sit amet', 20, '***'); // = 'Lorem ipsum dolor si***'
 
 // Generate a random string of a given length (defaults to 32)
 Str.random(); // e.g. = 'LDGMzIEHKrnoDFqHIzFwyHwwIGEHK0xM'

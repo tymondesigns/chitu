@@ -68,3 +68,8 @@ test('it should convert a string into snake case', t => {
     t.is(Str.snake('chuckHerInTheUTE'), 'chuck_her_in_the_u_t_e');
     t.is(Str.snake('chuckherintheute'), 'chuckherintheute');
 });
+
+test('it should convert a string to ascii', t => {
+    t.is(Str.ascii('@ðẻ-₀ფف'), 'atde-0ff');
+    t.is(Str.ascii('♥'), 'love');
+});
