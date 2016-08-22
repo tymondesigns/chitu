@@ -58,7 +58,20 @@ const fooVal = value(foo, 2, 2, 2); // = 8
 const barVal = value(bar); // = ['baz']
 ```
 
-### Str
+### round
+
+Round a number to a given number of decimal places.
+
+```js
+import { round } from 'chitu';
+
+round(123.456); // = 123.46
+round(1, 2); // = 1.00
+round(1.937); // = 1.94
+// etc
+```
+
+<!-- ### Str
 
 String manipulation utilities. Inspired by Laravel's `Illuminate\Support\Str`
 
@@ -85,4 +98,4 @@ Str.limit('Lorem ipsum dolor sit amet', 20, '***'); // = 'Lorem ipsum dolor si**
 // Generate a random string of a given length (defaults to 32)
 Str.random(); // e.g. = 'LDGMzIEHKrnoDFqHIzFwyHwwIGEHK0xM'
 Str.random(16); // e.g. = 'yHuG1F2wrEvKJGME'
-```
+``` -->

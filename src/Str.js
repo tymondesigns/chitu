@@ -200,7 +200,7 @@ class Str {
 
         // let flip = separator == '-' ? '_' : '-';
 
-        
+
 
         return this.strip(val);
     }
