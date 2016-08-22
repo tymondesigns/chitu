@@ -1,7 +1,7 @@
 {
   "name": "chitu",
   "amdName": "chitu",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Chuck Her In The Ute",
   "main": "dist/chitu.js",
   "jsnext:main": "src/index.js",
