@@ -17,6 +17,11 @@ JavaScript Utilities
 > npm install chitu --save
 ```
 
+#### via yarn
+```js
+> yarn add chitu
+```
+
 ## Modules available
 
 ### type
