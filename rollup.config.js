@@ -6,8 +6,18 @@ import filesize from 'rollup-plugin-filesize'
 
 const format = process.env.NODE_ENV
 const isUmd = format === 'umd'
+const isES = format === 'es'
 
-const getFileName = file => `${file}${isUmd ? '.min' : ''}.js`
+const getFileName = file => {
+  let suffix = ''
+  if (isUmd) {
+    suffix = '.min'
+  } else if (isES) {
+    suffix = '.es'
+  }
+
+  return `${file}${suffix}.js`
+}
 
 const config = {
   name: 'chitu',
