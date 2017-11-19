@@ -4,4 +4,9 @@
 /dist
 coverage
 .nyc_output
-docs
+/Contracts
+/Serializers
+/*.d.ts
+.rpt2_cache/
+/Utils
+/mocks

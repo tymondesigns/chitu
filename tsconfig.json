@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "inlineSources": true,
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES5",
+    "lib": ["es5", "es6", "dom"],
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "filesGlob": ["typings/index.d.ts", "src/**/*"]
+}

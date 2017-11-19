@@ -1,28 +1,23 @@
 {
   "name": "chitu",
-  "amdName": "chitu",
-  "version": "0.3.0",
-  "description": "Chuck Her In The Ute",
+  "version": "0.5.0",
+  "description": "JavaScript Utilities (Chuck Her In The Ute)",
   "main": "dist/chitu.js",
-  "jsnext:main": "src/index.js",
-  "minified:main": "dist/chitu.min.js",
+  "types": "index.d.ts",
   "scripts": {
-    "clean": "rimraf dist/",
-    "build": "npm-run-all clean transpile minify size",
-    "transpile": "rollup -c rollup.config.js -m ${npm_package_main}.map -f umd -n $npm_package_name -u $npm_package_amdName src/index.js -o $npm_package_main",
-    "minify": "uglifyjs $npm_package_main --mangle-regex=\"/^(classCallCheck|components|normalizeName|add|clean|process|collect|create|nodes|itemsOffline)$/\" --mangle-props -cm -o $npm_package_minified_main -p relative --in-source-map ${npm_package_main}.map --source-map ${npm_package_minified_main}.map --screw-ie8",
-    "size": "size=$(gzip-size $npm_package_minified_main) && echo \"gzip size: $(pretty-bytes $size)\"",
-    "test": "npm-run-all lint test:ava",
-    "test:ava": "ava --verbose",
-    "test:watch": "npm run test:ava -- --watch",
-    "test:ci": "nyc ava && nyc report --reporter=lcov | codecov",
-    "test:report": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
-    "lint": "eslint src test",
-    "docs": "jsdoc --configure .jsdoc.json --verbose",
-    "docs:open": "npm run docs && open docs/$npm_package_name/$npm_package_version/index.html",
-    "gh-pages": "npm run docs && github-pages -r tymondesigns/chitu ./docs/$npm_package_name/$npm_package_version",
+    "compile": "tsc --pretty",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build:umd": "cross-env NODE_ENV=umd rollup --config",
+    "build:cjs": "cross-env NODE_ENV=cjs rollup --config",
+    "build": "run-p build:*",
+    "clean": "rimraf dist",
+    "check": "run-s compile lint test",
+    "test": "jest",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prebuild": "run-s format check clean",
     "prepublish": "npm run build",
-    "release": "NODE_ENV=production npm run build && npm test && git add -A && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "coverage": "codecov",
+    "docs": "typedoc --out docs"
   },
   "repository": {
     "type": "git",
@@ -34,59 +29,40 @@
     "url": "https://github.com/tymondesigns/chitu/issues"
   },
   "homepage": "https://github.com/tymondesigns/chitu",
+  "dependencies": {
+    "chitu": "^0.3.0"
+  },
   "devDependencies": {
-    "ava": "^0.14.0",
-    "babel": "^6.5.1",
-    "babel-core": "^6.5.1",
-    "babel-eslint": "^4.1.8",
-    "babel-plugin-typecheck": "^3.8.0",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-es2015-rollup": "^1.1.1",
-    "babel-preset-stage-2": "^6.5.0",
-    "babel-runtime": "^6.5.0",
-    "eslint": "^1.10.3",
-    "eslint-plugin-babel": "^3.2.0",
-    "github-pages": "^3.0.2",
-    "gzip-size-cli": "^1.0.0",
-    "jsdoc": "^3.4.0",
-    "minami": "^1.1.1",
-    "npm-run-all": "^1.5.1",
-    "nyc": "^5.6.0",
-    "open": "0.0.5",
-    "pretty-bytes-cli": "^1.0.0",
+    "@types/jest": "^21.1.6",
+    "codecov": "^1.0.1",
+    "cross-env": "^5.1.1",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.8.2",
     "rimraf": "^2.5.1",
-    "rollup": "^0.34.3",
-    "rollup-plugin-babel": "^2.3.9",
+    "rollup": "^0.50.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-filesize": "^1.4.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.8.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "ts-jest": "^21.2.1",
+    "tslint": "^5.8.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.6.1",
     "uglify-js": "^2.6.1"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-2"
-    ],
-    "plugins": [
-      [
-        "typecheck",
-        {
-          "disable": {
-            "production": true
-          }
-        }
-      ]
-    ],
-    "env": {
-      "development": {
-        "sourceMaps": "inline"
-      }
-    }
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
-  "ava": {
-    "files": [
-      "test/**/*.js"
-    ],
-    "require": [
-      "babel-core/register"
-    ],
-    "babel": "inherit"
+  "jest": {
+    "moduleFileExtensions": ["ts", "js"],
+    "transform": {
+      "^.+\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": ["<rootDir>/src/**/*.spec.ts"],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
