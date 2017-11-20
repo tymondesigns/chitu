@@ -53,8 +53,7 @@ describe('type', () => {
 
     test(`it should check ${tp} type`, () => {
       for (let assertion in assertions) {
-        for (let val of assertions[assertion])
-          expect(type[`is${tp}`](val))[`toBe${assertion}`]()
+        for (let val of assertions[assertion]) expect(type[`is${tp}`](val))[`toBe${assertion}`]()
       }
     })
   }

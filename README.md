@@ -24,6 +24,14 @@ JavaScript Utilities
 
 ## Modules available
 
+Chitu exports 3 module types:
+
+- **UMD** (`dist/chitu.min.js`)
+- **Common JS** (`dist/chitu.js`)
+- **ES Module** (`dist/chitu.es.js`)
+
+## Usage
+
 ### type
 A module to check the type of a given value.
 

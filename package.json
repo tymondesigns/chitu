@@ -1,6 +1,6 @@
 {
   "name": "chitu",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "JavaScript Utilities (Chuck Her In The Ute)",
   "main": "dist/chitu.js",
   "module": "dist/chitu.es.js",
@@ -19,7 +19,7 @@
     "prebuild": "run-s format check clean",
     "prepublish": "npm run build",
     "coverage": "codecov",
-    "docs": "typedoc --out docs"
+    "docs": "typedoc --mode modules --out ./docs src"
   },
   "repository": {
     "type": "git",
@@ -56,7 +56,8 @@
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 100
   },
   "jest": {
     "moduleFileExtensions": ["ts", "js"],

@@ -1,7 +1,5 @@
 const type: any = {},
-  types = 'Array Object String Date RegExp Function Boolean Number Error Null Undefined'.split(
-    ' '
-  )
+  types = 'Array Object String Date RegExp Function Boolean Number Error Null Undefined'.split(' ')
 
 /**
  * Check the type of a value.

@@ -28,7 +28,14 @@ const config = {
     format
   },
   plugins: [
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfigOverride: {
+        compilerOptions: {
+          target: isES ? 'es6' : 'es5'
+        }
+      }
+    }),
     resolve({
       jsnext: true,
       main: true,
