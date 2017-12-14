@@ -50,11 +50,12 @@ import { type } from 'chitu'
 
 ## Usage
 
-- [type](#type)
-- [value](#value)
-- [round](#round)
-- [ordinal](#ordinal)
-- [time](#time)
+* [type](#type)
+* [value](#value)
+* [round](#round)
+* [ordinal](#ordinal)
+* [time](#time)
+* [dot](#dot)
 
 ### type
 
@@ -159,5 +160,6 @@ const obj = {
 dot(obj, 'foo.bar') // = 'lorem'
 dot(obj, 'foo.baz.bob') // = true
 dot(obj, 'foo.baz.bar', 'someDefault') // = 'someDefault'
+dot(obj, 'foo.foo.foo') // = undefined
 // etc
 ```
