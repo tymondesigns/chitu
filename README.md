@@ -50,6 +50,12 @@ import { type } from 'chitu'
 
 ## Usage
 
+- [type](#type)
+- [value](#value)
+- [round](#round)
+- [ordinal](#ordinal)
+- [time](#time)
+
 ### type
 
 A module to check the type of a given value.
