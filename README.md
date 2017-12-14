@@ -28,9 +28,25 @@ JavaScript Utilities
 
 Chitu exports 3 module types:
 
-* **UMD** (`dist/chitu.min.js`)
-* **Common JS** (`dist/chitu.js`)
-* **ES Module** (`dist/chitu.es.js`)
+* **UMD** (`dist/chitu.min.js`) https://unpkg.com/chitu@0.4.2/dist/chitu.min.js
+
+```js
+// Available on
+window.chitu
+```
+
+* **Common JS** (`dist/chitu.js`) https://unpkg.com/chitu@0.4.2/dist/chitu.js
+
+```js
+const chitu = require('chitu')
+```
+
+* **ES Module** (`dist/chitu.es.js`) https://unpkg.com/chitu@0.4.2/dist/chitu.es.js
+
+```js
+import chitu from 'chitu'
+import { type } from 'chitu'
+```
 
 ## Usage
 
