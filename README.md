@@ -132,3 +132,26 @@ time(100) // = '01:40'
 time(5000) // = '01:23:20'
 // etc
 ```
+
+### dot
+
+Get an item from a given object using string dot notation.
+
+```js
+import { dot } from 'chitu'
+
+const obj = {
+  foo: {
+    bar: 'lorem',
+    baz: {
+      bob: true,
+      qux: null
+    }
+  }
+}
+
+dot(obj, 'foo.bar') // = 'lorem'
+dot(obj, 'foo.baz.bob') // = true
+dot(obj, 'foo.baz.bar', 'someDefault') // = 'someDefault'
+// etc
+```
