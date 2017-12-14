@@ -31,9 +31,6 @@
     "url": "https://github.com/tymondesigns/chitu/issues"
   },
   "homepage": "https://github.com/tymondesigns/chitu",
-  "dependencies": {
-    "chitu": "^0.3.0"
-  },
   "devDependencies": {
     "@types/jest": "^21.1.6",
     "codecov": "^1.0.1",

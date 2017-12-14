@@ -13,11 +13,13 @@ JavaScript Utilities
 ## Installation
 
 #### via npm
+
 ```js
 > npm install chitu --save
 ```
 
 #### via yarn
+
 ```js
 > yarn add chitu
 ```
@@ -26,49 +28,51 @@ JavaScript Utilities
 
 Chitu exports 3 module types:
 
-- **UMD** (`dist/chitu.min.js`)
-- **Common JS** (`dist/chitu.js`)
-- **ES Module** (`dist/chitu.es.js`)
+* **UMD** (`dist/chitu.min.js`)
+* **Common JS** (`dist/chitu.js`)
+* **ES Module** (`dist/chitu.es.js`)
 
 ## Usage
 
 ### type
+
 A module to check the type of a given value.
 
 ```js
-import { type } from 'chitu';
+import { type } from 'chitu'
 
-type.isArray(['foo', 'bar']); // = true
-type.isObject({ foo: 'bar' }); // = true
-type.isString('foo'); // = true
-type.isDate(new Date()); // = true
-type.isRegExp(/foo/g); // = true
-type.isFunction(function () {}); // = true
-type.isBoolean(false); // = true
-type.isNumber(123); // = true
-type.isError(new Error()); // = true
-type.isNull(null); // = true
-type.isUndefined(void 0); // = true
+type.isArray(['foo', 'bar']) // = true
+type.isObject({ foo: 'bar' }) // = true
+type.isString('foo') // = true
+type.isDate(new Date()) // = true
+type.isRegExp(/foo/g) // = true
+type.isFunction(function() {}) // = true
+type.isBoolean(false) // = true
+type.isNumber(123) // = true
+type.isError(new Error()) // = true
+type.isNull(null) // = true
+type.isUndefined(void 0) // = true
 
 // or for anything else
-type.is('Symbol', Symbol('foo')); // = true
-type.is('Map', new Map([])); // = true
-type.is('Set', new Set([])); // = true
+type.is('Symbol', Symbol('foo')) // = true
+type.is('Map', new Map([])) // = true
+type.is('Set', new Set([])) // = true
 // etc
 ```
 
 ### value
 
-Check if the value is a function and execute it (with provided parameters) or simply return the value.
+Check if the value is a function and execute it (with provided parameters) or simply return the
+value.
 
 ```js
-import { value } from 'chitu';
+import { value } from 'chitu'
 
-const foo = (a, b, c) => a * b * c;
-const bar = ['baz'];
+const foo = (a, b, c) => a * b * c
+const bar = ['baz']
 
-const fooVal = value(foo, 2, 2, 2); // = 8
-const barVal = value(bar); // = ['baz']
+const fooVal = value(foo, 2, 2, 2) // = 8
+const barVal = value(bar) // = ['baz']
 ```
 
 ### round
@@ -76,11 +80,11 @@ const barVal = value(bar); // = ['baz']
 Round a number to a given number of decimal places.
 
 ```js
-import { round } from 'chitu';
+import { round } from 'chitu'
 
-round(123.456); // = 123.46
-round(1, 2); // = 1.00
-round(1.937); // = 1.94
+round(123.456) // = 123.46
+round(1, 2) // = 1.00
+round(1.937) // = 1.94
 // etc
 ```
 
@@ -89,7 +93,7 @@ round(1.937); // = 1.94
 Return the ordinal value for a given number.
 
 ```js
-import { ordinal } from 'chitu';
+import { ordinal } from 'chitu'
 
 ordinal(1) // = '1st'
 ordinal(2) // = '2nd'
@@ -100,3 +104,15 @@ ordinal(101) // = '101st'
 // etc
 ```
 
+### time
+
+Return the human readable time string for a given number of seconds.
+
+```js
+import { time } from 'chitu'
+
+time(25) // = '00:25'
+time(100) // = '01:40'
+time(5000) // = '01:23:20'
+// etc
+```
