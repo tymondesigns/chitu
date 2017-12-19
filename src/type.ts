@@ -1,5 +1,17 @@
 const type: any = {},
-  types = 'Array Object String Date RegExp Function Boolean Number Error Null Undefined'.split(' ')
+  types: string[] = [
+    'Array',
+    'Object',
+    'String',
+    'Date',
+    'RegExp',
+    'Function',
+    'Boolean',
+    'Number',
+    'Error',
+    'Null',
+    'Undefined'
+  ]
 
 /**
  * Check the type of a value.
