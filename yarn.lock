@@ -508,10 +508,6 @@ chalk@^2.0.1, chalk@^2.1.0:
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
 
-chitu@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/chitu/-/chitu-0.3.0.tgz#7a4f69bfd4513245ed1ce4283f78cdd991f63cff"
-
 ci-info@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.1.1.tgz#47b44df118c48d2597b56d342e7e25791060171a"

@@ -7,5 +7,6 @@ describe('round', () => {
     expect(round(1.93788456, 4)).toBe(1.9379)
     expect(round(1.93788456, 0)).toBe(2)
     expect(round(12.345)).toBe(12.35)
+    expect(round(12, 0)).toBe(12)
   })
 })

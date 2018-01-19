@@ -45,7 +45,7 @@ const chitu = require('chitu')
 
 ```js
 import chitu from 'chitu'
-import { type } from 'chitu'
+import { type, round } from 'chitu'
 ```
 
 ## Usage
@@ -56,6 +56,7 @@ import { type } from 'chitu'
 * [ordinal](#ordinal)
 * [time](#time)
 * [dot](#dot)
+* [random](#random)
 
 ### type
 
@@ -159,7 +160,20 @@ const obj = {
 
 dot(obj, 'foo.bar') // = 'lorem'
 dot(obj, 'foo.baz.bob') // = true
+dot(obj, ['foo', 'baz', 'bob']) // = true
 dot(obj, 'foo.baz.bar', 'someDefault') // = 'someDefault'
 dot(obj, 'foo.foo.foo') // = undefined
+// etc
+```
+
+### random
+
+Generate a "random" alpha-numeric string.
+
+```js
+import { random } from 'chitu'
+
+random() // = 'Ky6zJuGnGyrnvw1y'
+random(32) // = 'nKusDo5JIFrI1tJswwzpEyGLpvML1Mxp'
 // etc
 ```
