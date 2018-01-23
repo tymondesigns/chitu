@@ -28,7 +28,7 @@ JavaScript Utilities
 
 Chitu exports 3 module types:
 
-* **UMD** (`dist/chitu.min.js`) https://unpkg.com/chitu@latest/dist/chitu.min.js
+* **UMD** (`dist/chitu.umd.js`) https://unpkg.com/chitu@latest/dist/chitu.umd.js
 
 ```js
 // Available on

@@ -8,10 +8,7 @@
   "scripts": {
     "compile": "tsc --pretty",
     "format": "prettier --write \"src/**/*.ts\"",
-    "build:umd": "cross-env NODE_ENV=umd rollup --config",
-    "build:cjs": "cross-env NODE_ENV=cjs rollup --config",
-    "build:es": "cross-env NODE_ENV=es rollup --config",
-    "build": "run-s build:*",
+    "build": "microbundle -e src/index.ts",
     "clean": "rimraf dist",
     "check": "run-s compile lint test",
     "test": "jest",
@@ -34,22 +31,15 @@
   "devDependencies": {
     "@types/jest": "^21.1.6",
     "codecov": "^1.0.1",
-    "cross-env": "^5.1.1",
     "jest": "^21.2.1",
+    "microbundle": "^0.4.0",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.8.2",
     "rimraf": "^2.5.1",
-    "rollup": "^0.50.0",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-filesize": "^1.4.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.8.0",
-    "rollup-plugin-uglify": "^2.0.1",
     "ts-jest": "^21.2.1",
     "tslint": "^5.8.0",
     "typedoc": "^0.9.0",
-    "typescript": "^2.6.1",
-    "uglify-js": "^2.6.1"
+    "typescript": "^2.6.1"
   },
   "prettier": {
     "semi": false,
