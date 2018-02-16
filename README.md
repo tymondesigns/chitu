@@ -1,5 +1,7 @@
 # chitu (Chuck Her In The Ute)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tymondesigns/chitu.svg)](https://greenkeeper.io/)
+
 ![Chuck Her In The Ute](https://cloud.githubusercontent.com/assets/1801923/15432591/ce7337fc-1ea6-11e6-86d0-c796891bb04b.png)
 
 [youtube.com/watch?v=9i2eZaJsC7g](https://www.youtube.com/watch?v=9i2eZaJsC7g)

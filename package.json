@@ -29,16 +29,16 @@
   },
   "homepage": "https://github.com/tymondesigns/chitu",
   "devDependencies": {
-    "@types/jest": "^21.1.6",
-    "codecov": "^1.0.1",
-    "jest": "^21.2.1",
+    "@types/jest": "^22.1.2",
+    "codecov": "^3.0.0",
+    "jest": "^22.3.0",
     "microbundle": "^0.4.0",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.8.2",
     "rimraf": "^2.5.1",
-    "ts-jest": "^21.2.1",
+    "ts-jest": "^22.0.4",
     "tslint": "^5.8.0",
-    "typedoc": "^0.9.0",
+    "typedoc": "^0.10.0",
     "typescript": "^2.6.1"
   },
   "prettier": {
