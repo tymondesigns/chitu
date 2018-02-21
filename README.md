@@ -28,11 +28,11 @@ JavaScript Utilities
 
 Chitu exports 3 module types:
 
-* **UMD** (`dist/chitu.umd.js`) https://unpkg.com/chitu@latest/dist/chitu.umd.js
+* **ES Module** (`dist/chitu.es.js`) https://unpkg.com/chitu@latest/dist/chitu.es.js
 
 ```js
-// Available on
-window.chitu
+import chitu from 'chitu'
+import { type, round } from 'chitu'
 ```
 
 * **Common JS** (`dist/chitu.js`) https://unpkg.com/chitu@latest/dist/chitu.js
@@ -41,11 +41,12 @@ window.chitu
 const chitu = require('chitu')
 ```
 
-* **ES Module** (`dist/chitu.es.js`) https://unpkg.com/chitu@latest/dist/chitu.es.js
+
+* **UMD** (`dist/chitu.umd.js`) https://unpkg.com/chitu@latest/dist/chitu.umd.js
 
 ```js
-import chitu from 'chitu'
-import { type, round } from 'chitu'
+// Available on
+window.chitu
 ```
 
 ## Usage
