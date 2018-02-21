@@ -1,6 +1,6 @@
 {
   "name": "chitu",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "JavaScript Utilities (Chuck Her In The Ute)",
   "main": "dist/chitu.js",
   "module": "dist/chitu.es.js",
