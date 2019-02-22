@@ -32,7 +32,7 @@
     "@types/jest": "^23.0.0",
     "codecov": "^3.0.0",
     "jest": "^22.3.0",
-    "microbundle": "^0.4.4",
+    "microbundle": "^0.10.0",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.8.2",
     "rimraf": "^2.5.1",
