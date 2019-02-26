@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/tymondesigns/chitu",
   "devDependencies": {
-    "@types/jest": "^23.0.0",
+    "@types/jest": "^24.0.7",
     "codecov": "^3.0.0",
     "jest": "^22.3.0",
     "microbundle": "^0.4.4",
